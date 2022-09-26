@@ -4,6 +4,7 @@ import 'package:flutter_application_2/Belajar/anonymous_method.dart';
 import 'package:flutter_application_2/Belajar/belajar_button_gradiasi.dart';
 import 'package:flutter_application_2/Belajar/belajar_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_container.dart';
+import 'package:flutter_application_2/Belajar/belajar_costum_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_fontstyle.dart';
 import 'package:flutter_application_2/Belajar/belajar_image.dart';
 import 'package:flutter_application_2/Belajar/belajar_media_query.dart';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         containerList(context, 'Media Query', const BelajarMediaQuery()),
         containerList(
             context, 'inkWell (buttonSendiri)', const BelajarInkwell()),
+        containerList(context, 'CostumCard', const BelajarCostumCard()),
       ]),
     );
   }
