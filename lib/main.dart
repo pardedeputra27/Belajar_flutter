@@ -5,6 +5,7 @@ import 'package:flutter_application_2/Belajar/belajar_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_container.dart';
 import 'package:flutter_application_2/Belajar/belajar_fontstyle.dart';
 import 'package:flutter_application_2/Belajar/belajar_image.dart';
+import 'package:flutter_application_2/Belajar/belajar_media_query.dart';
 import 'package:flutter_application_2/Belajar/belajar_row_dan_column.dart';
 import 'package:flutter_application_2/Belajar/belajar_spacer.dart';
 import 'package:flutter_application_2/Belajar/belajar_statefull.dart';
@@ -50,7 +51,8 @@ class MyApp extends StatelessWidget {
         containerList(context, 'Spacer', const BelajarSpacer()),
         containerList(context, 'Draggable', const BelajarDraggable()),
         containerList(context, 'Card', const BelajarCard()),
-        containerList(context, 'Belajar Text Field', const BelajarTextField()),
+        containerList(context, 'Text Field', const BelajarTextField()),
+        containerList(context, 'Media Query', const BelajarMediaQuery()),
       ]),
     );
   }
