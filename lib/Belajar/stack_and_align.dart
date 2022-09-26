@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const BelajarStack());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BelajarStack extends StatelessWidget {
+  const BelajarStack({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,15 @@ class MyApp extends StatelessWidget {
     // Stck itu artinya ditumpuk atau ditimpa
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Center(child: Text('CTE'))),
+        appBar: AppBar(
+          title: const Center(child: Text('CTE')),
+          leading: BackButton(
+            color: Colors.black,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
         body: Stack(
           children: <Widget>[
             //background

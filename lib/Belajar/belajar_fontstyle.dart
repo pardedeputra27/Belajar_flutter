@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BelajarTextStyle extends StatefulWidget {
+  const BelajarTextStyle({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<BelajarTextStyle> createState() => _BelajarTextStyleState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _BelajarTextStyleState extends State<BelajarTextStyle> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,6 +23,12 @@ class _MyAppState extends State<MyApp> {
                   decorationThickness: 2,
                   decorationStyle: TextDecorationStyle.dotted),
             ),
+          ),
+          leading: BackButton(
+            color: Colors.black,
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
         ),
         body: Column(

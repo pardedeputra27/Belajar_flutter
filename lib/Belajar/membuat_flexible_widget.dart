@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BelajarFlexibleWidget extends StatelessWidget {
+  const BelajarFlexibleWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +9,12 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(
               title: const Center(child: Text('CTE1')),
+              leading: BackButton(
+                color: Colors.black,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
             ),
             body: Column(
               children: <Widget>[

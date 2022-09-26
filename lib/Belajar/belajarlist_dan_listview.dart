@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BelajarListAndListview extends StatefulWidget {
+  const BelajarListAndListview({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<BelajarListAndListview> createState() => _BelajarListAndListviewState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _BelajarListAndListviewState extends State<BelajarListAndListview> {
   List<Widget> widgetku = [];
   int counter = 0;
 
@@ -30,9 +26,16 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-            title: const Center(
-          child: Text('CTE'),
-        )),
+          title: const Center(
+            child: Text('CTE'),
+          ),
+          leading: BackButton(
+            color: Colors.black,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ),
         body: ListView(children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -45,7 +48,7 @@ class _MyAppState extends State<MyApp> {
                       counter++;
                     });
                   },
-                  child: const Text('tombol pertama')),
+                  child: const Text('tombol hapus')),
               ElevatedButton(
                   onPressed: () {
                     setState(() {
@@ -53,7 +56,7 @@ class _MyAppState extends State<MyApp> {
                       counter--;
                     });
                   },
-                  child: const Text('tombol Kedua')),
+                  child: const Text('tombol tambah')),
             ],
           ),
           Column(

@@ -1,33 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/belajar_spacer.dart';
+import 'package:flutter_application_2/Belajar/animated_container_and_gesture_detector.dart';
+import 'package:flutter_application_2/Belajar/anonymous_method.dart';
+import 'package:flutter_application_2/Belajar/belajar_container.dart';
+import 'package:flutter_application_2/Belajar/belajar_fontstyle.dart';
+import 'package:flutter_application_2/Belajar/belajar_image.dart';
+import 'package:flutter_application_2/Belajar/belajar_row_dan_column.dart';
+import 'package:flutter_application_2/Belajar/belajar_spacer.dart';
+import 'package:flutter_application_2/Belajar/belajar_statefull.dart';
+import 'package:flutter_application_2/Belajar/belajarlist_dan_listview.dart';
+import 'package:flutter_application_2/Belajar/draggable.dart';
+import 'package:flutter_application_2/Belajar/membuat_flexible_widget.dart';
+import 'package:flutter_application_2/Belajar/stack_and_align.dart';
 
 void main() {
   runApp(const MaterialApp(
     title: 'Navigation Basics',
-    home: FirstRoute(),
+    home: MyApp(),
   ));
 }
 
-class FirstRoute extends StatelessWidget {
-  const FirstRoute({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('First Route'),
+        title: const Flexible(
+          flex: 1,
+          child: Text('Belajar Flutter dari erico dermawan'),
+        ),
       ),
       body: ListView(children: [
-        ElevatedButton(
-          child: const Text('Open route'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const BelajarSpacer()),
-            );
-          },
-        ),
+        containerList(context, 'Row and Column', const BelajarRowAndColumn()),
+        containerList(context, 'Container', const BelajarContainer()),
+        containerList(context, 'Statefull', const BelajarStatefull()),
+        containerList(
+            context, 'Anynomous Method', const BelajarAnonymousMethod()),
+        containerList(context, 'Text Style', const BelajarTextStyle()),
+        containerList(
+            context, 'List and ListView', const BelajarListAndListview()),
+        containerList(
+            context, 'Animated and Gesture', const BelajarAnimatedAndGesture()),
+        containerList(context, 'Flexible', const BelajarFlexibleWidget()),
+        containerList(context, 'Stack and Align', const BelajarStack()),
+        containerList(context, 'Image', const BelajarImage()),
+        containerList(context, 'Spacer', const BelajarSpacer()),
+        containerList(context, 'Draggable', const BelajarDraggable()),
       ]),
     );
   }
+}
+
+Widget containerList(context, text, route) {
+  return Container(
+      margin: const EdgeInsets.only(top: 5, left: 20, right: 20),
+      child: ElevatedButton(
+        child: Text('$text'),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => route),
+          );
+        },
+      ));
 }

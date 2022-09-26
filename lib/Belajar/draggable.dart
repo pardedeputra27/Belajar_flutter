@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BelajarDraggable extends StatefulWidget {
+  const BelajarDraggable({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<BelajarDraggable> createState() => _BelajarDraggableState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _BelajarDraggableState extends State<BelajarDraggable> {
   Color color1 = Colors.red;
   Color color2 = Colors.blue;
   Color targetColor = Colors.yellow;
@@ -23,6 +19,12 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Center(child: Text('CTE')),
+          leading: BackButton(
+            color: Colors.black,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

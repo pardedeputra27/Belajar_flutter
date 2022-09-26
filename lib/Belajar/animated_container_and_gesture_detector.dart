@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BelajarAnimatedAndGesture extends StatefulWidget {
+  const BelajarAnimatedAndGesture({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<BelajarAnimatedAndGesture> createState() =>
+      _BelajarAnimatedAndGestureState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _BelajarAnimatedAndGestureState extends State<BelajarAnimatedAndGesture> {
   Random random = Random();
 
   @override
@@ -21,6 +18,12 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: const Center(child: Text('CTE')),
+          leading: BackButton(
+            color: Colors.black,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
         body: Center(
           child: GestureDetector(

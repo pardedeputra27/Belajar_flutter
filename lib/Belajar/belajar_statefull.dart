@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BelajarStatefull extends StatefulWidget {
+  const BelajarStatefull({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<BelajarStatefull> createState() => _BelajarStatefullState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _BelajarStatefullState extends State<BelajarStatefull> {
   int number = 0;
   void tekanTombol() {
     setState(() {
@@ -25,7 +21,13 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Belajar Stateful'),
+          title: const Text('Belajar Statefull'),
+          leading: BackButton(
+            color: Colors.black,
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
         ),
         body: Center(
           child: Column(

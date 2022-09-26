@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class BelajarAnonymousMethod extends StatefulWidget {
+  const BelajarAnonymousMethod({Key? key}) : super(key: key);
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<BelajarAnonymousMethod> createState() => _BelajarAnonymousMethodState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _BelajarAnonymousMethodState extends State<BelajarAnonymousMethod> {
   String messeges = 'Ini adalah text ketika di ketik';
   // void klik() {
   //   setState(() {
@@ -25,6 +21,12 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
           appBar: AppBar(
             title: const Text('Anonymous Method'),
+            leading: BackButton(
+              color: Colors.black,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
           ),
           body: Center(
             child: Column(
