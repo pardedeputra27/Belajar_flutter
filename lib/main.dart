@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Belajar/animated_container_and_gesture_detector.dart';
 import 'package:flutter_application_2/Belajar/anonymous_method.dart';
+import 'package:flutter_application_2/Belajar/belajar_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_container.dart';
 import 'package:flutter_application_2/Belajar/belajar_fontstyle.dart';
 import 'package:flutter_application_2/Belajar/belajar_image.dart';
@@ -47,16 +48,17 @@ class MyApp extends StatelessWidget {
         containerList(context, 'Image', const BelajarImage()),
         containerList(context, 'Spacer', const BelajarSpacer()),
         containerList(context, 'Draggable', const BelajarDraggable()),
+        containerList(context, 'Card', const BelajarCard()),
       ]),
     );
   }
 }
 
-Widget containerList(context, text, route) {
+Container containerList(BuildContext context, String text, Widget route) {
   return Container(
       margin: const EdgeInsets.only(top: 5, left: 20, right: 20),
       child: ElevatedButton(
-        child: Text('$text'),
+        child: Text(text),
         onPressed: () {
           Navigator.push(
             context,
