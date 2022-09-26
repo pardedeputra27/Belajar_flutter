@@ -8,6 +8,7 @@ import 'package:flutter_application_2/Belajar/belajar_image.dart';
 import 'package:flutter_application_2/Belajar/belajar_row_dan_column.dart';
 import 'package:flutter_application_2/Belajar/belajar_spacer.dart';
 import 'package:flutter_application_2/Belajar/belajar_statefull.dart';
+import 'package:flutter_application_2/Belajar/belajar_textfield.dart';
 import 'package:flutter_application_2/Belajar/belajarlist_dan_listview.dart';
 import 'package:flutter_application_2/Belajar/draggable.dart';
 import 'package:flutter_application_2/Belajar/membuat_flexible_widget.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
         containerList(context, 'Spacer', const BelajarSpacer()),
         containerList(context, 'Draggable', const BelajarDraggable()),
         containerList(context, 'Card', const BelajarCard()),
+        containerList(context, 'Belajar Text Field', const BelajarTextField()),
       ]),
     );
   }
