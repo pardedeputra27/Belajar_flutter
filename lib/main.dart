@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {
           '/': (context) => const FirstRoutes(),
