@@ -5,6 +5,7 @@ import 'package:flutter_application_2/Belajar/belajar_button_gradiasi.dart';
 import 'package:flutter_application_2/Belajar/belajar_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_container.dart';
 import 'package:flutter_application_2/Belajar/belajar_costum_card.dart';
+import 'package:flutter_application_2/Belajar/belajar_design_appbar.dart';
 import 'package:flutter_application_2/Belajar/belajar_fontstyle.dart';
 import 'package:flutter_application_2/Belajar/belajar_hero_dan_cliprrect.dart';
 import 'package:flutter_application_2/Belajar/belajar_image.dart';
@@ -20,10 +21,7 @@ import 'package:flutter_application_2/Belajar/membuat_flexible_widget.dart';
 import 'package:flutter_application_2/Belajar/stack_and_align.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    title: 'Navigation Basics',
-    home: MyApp(),
-  ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -31,48 +29,51 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Flexible(
-          flex: 1,
-          child: Text('Belajar Flutter dari erico dermawan'),
-        ),
-      ),
-      body: ListView(children: [
-        Center(
-            child: Container(
-          margin: const EdgeInsets.only(top: 10, bottom: 10),
-          child: const Text(
-            'Ini adalah hasil pembelajaran saya',
-            style:
-                TextStyle(color: Colors.green, fontSize: 20, letterSpacing: 2),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Flexible(
+            flex: 1,
+            child: Text('Belajar Flutter dari erico dermawan'),
           ),
-        )),
-        containerList(context, 'Row and Column', const BelajarRowAndColumn()),
-        containerList(context, 'Container', const BelajarContainer()),
-        containerList(context, 'Statefull', const BelajarStatefull()),
-        containerList(
-            context, 'Anynomous Method', const BelajarAnonymousMethod()),
-        containerList(context, 'Text Style', const BelajarTextStyle()),
-        containerList(
-            context, 'List and ListView', const BelajarListAndListview()),
-        containerList(
-            context, 'Animated and Gesture', const BelajarAnimatedAndGesture()),
-        containerList(context, 'Flexible', const BelajarFlexibleWidget()),
-        containerList(context, 'Stack and Align', const BelajarStack()),
-        containerList(context, 'Image', const BelajarImage()),
-        containerList(context, 'Spacer', const BelajarSpacer()),
-        containerList(context, 'Draggable', const BelajarDraggable()),
-        containerList(context, 'Card', const BelajarCard()),
-        containerList(context, 'Text Field', const BelajarTextField()),
-        containerList(context, 'Media Query', const BelajarMediaQuery()),
-        containerList(
-            context, 'inkWell (buttonSendiri)', const BelajarInkwell()),
-        containerList(context, 'CostumCard', const BelajarCostumCard()),
-        containerList(context, 'Login Page', const BelajarLoginPage()),
-        containerList(
-            context, 'HeroAndClipRRect', const BelajarHeroAndClipRRect()),
-      ]),
+        ),
+        body: ListView(children: [
+          Center(
+              child: Container(
+            margin: const EdgeInsets.only(top: 10, bottom: 10),
+            child: const Text(
+              'Ini adalah hasil pembelajaran saya',
+              style: TextStyle(
+                  color: Colors.green, fontSize: 20, letterSpacing: 2),
+            ),
+          )),
+          containerList(context, 'Row and Column', const BelajarRowAndColumn()),
+          containerList(context, 'Container', const BelajarContainer()),
+          containerList(context, 'Statefull', const BelajarStatefull()),
+          containerList(
+              context, 'Anynomous Method', const BelajarAnonymousMethod()),
+          containerList(context, 'Text Style', const BelajarTextStyle()),
+          containerList(
+              context, 'List and ListView', const BelajarListAndListview()),
+          containerList(context, 'Animated and Gesture',
+              const BelajarAnimatedAndGesture()),
+          containerList(context, 'Flexible', const BelajarFlexibleWidget()),
+          containerList(context, 'Stack and Align', const BelajarStack()),
+          containerList(context, 'Image', const BelajarImage()),
+          containerList(context, 'Spacer', const BelajarSpacer()),
+          containerList(context, 'Draggable', const BelajarDraggable()),
+          containerList(context, 'Card', const BelajarCard()),
+          containerList(context, 'Text Field', const BelajarTextField()),
+          containerList(context, 'Media Query', const BelajarMediaQuery()),
+          containerList(
+              context, 'inkWell (buttonSendiri)', const BelajarInkwell()),
+          containerList(context, 'CostumCard', const BelajarCostumCard()),
+          containerList(context, 'Login Page', const BelajarLoginPage()),
+          containerList(
+              context, 'HeroAndClipRRect', const BelajarHeroAndClipRRect()),
+          containerList(context, 'Appbar design', const BelajarDesignAppBar()),
+        ]),
+      ),
     );
   }
 }
