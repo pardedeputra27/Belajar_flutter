@@ -19,6 +19,7 @@ import 'package:flutter_application_2/Belajar/draggable.dart';
 import 'package:flutter_application_2/Belajar/login_page.dart';
 import 'package:flutter_application_2/Belajar/membuat_flexible_widget.dart';
 import 'package:flutter_application_2/Belajar/stack_and_align.dart';
+import 'package:flutter_application_2/tabbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,80 +57,6 @@ class MyApp extends StatelessWidget {
           '/hero': (context) => const BelajarHeroAndClipRRect(),
           '/appbar': (context) => const BelajarDesignAppBar(),
         },
-      ),
-    );
-  }
-}
-
-Container containerList(BuildContext context, String text, String route) {
-  return Container(
-      margin: const EdgeInsets.only(top: 5, left: 20, right: 20),
-      child: ElevatedButton(
-        child: Text(text),
-        onPressed: () {
-          Navigator.pushNamed(context, route);
-        },
-      ));
-}
-
-class FirstRoutes extends StatelessWidget {
-  const FirstRoutes({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          bottom: const TabBar(
-            tabs: [
-              Tab(icon: Icon(Icons.computer)),
-              Tab(icon: Icon(Icons.safety_check)),
-              Tab(icon: Icon(Icons.directions_bike)),
-            ],
-          ),
-          title: const Text('BeLajar dari Erico dermawan'),
-        ),
-        body: TabBarView(children: [
-          ListView(children: [
-            Center(
-                child: Container(
-              margin: const EdgeInsets.only(top: 10, bottom: 10),
-              child: const Text(
-                'Ini adalah hasil pembelajaran saya',
-                style: TextStyle(
-                    color: Colors.green, fontSize: 20, letterSpacing: 2),
-              ),
-            )),
-            containerList(context, 'Row and Column', '/row'),
-            containerList(context, 'Container', '/container'),
-            containerList(context, 'Statefull', '/statefull'),
-            containerList(context, 'Anynomous Method', '/anynomous'),
-            containerList(context, 'Text Style', '/textStyle'),
-            containerList(context, 'List and ListView', '/list'),
-            containerList(context, 'Animated and Gesture', '/animated'),
-            containerList(context, 'Flexible', '/flexible'),
-            containerList(context, 'Stack and Align', '/stack'),
-            containerList(context, 'Image', '/image'),
-            containerList(context, 'Spacer', '/spacer'),
-            containerList(context, 'Draggable', '/draggable'),
-            containerList(context, 'Card', '/card'),
-            containerList(context, 'Text Field', '/textField'),
-            containerList(context, 'Media Query', '/mediaQuery'),
-            containerList(context, 'inkWell (buttonSendiri)', '/inkwell'),
-            containerList(context, 'CostumCard', '/costumCard'),
-            containerList(context, 'Login Page', '/loginPage'),
-            containerList(context, 'HeroAndClipRRect', '/hero'),
-            containerList(context, 'Appbar design', '/appbar'),
-          ]),
-          const Icon(
-            Icons.safety_check,
-            size: 200,
-          ),
-          const Icon(
-            Icons.directions_bike,
-            size: 200,
-          ),
-        ]),
       ),
     );
   }
