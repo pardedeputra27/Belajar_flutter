@@ -8,30 +8,33 @@ class BelajarDesignAppBar extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          leading: BackButton(
-            color: Colors.black,
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          title: const Text("Latihan Appbar Design"),
-          actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.exit_to_app)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.list)),
-          ],
-          flexibleSpace: Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Color(0xff0096ff), Color(0xff6610f2)],
-                  begin: FractionalOffset.topLeft,
-                  end: FractionalOffset.bottomRight),
-              image: DecorationImage(
-                  image: AssetImage('assets/background-white-sand.jpg'),
-                  fit: BoxFit.none,
-                  repeat: ImageRepeat.repeat,
-                  opacity: 120),
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(35),
+          child: AppBar(
+            leading: BackButton(
+              color: Colors.black,
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+            title: const Text("Latihan Appbar Design"),
+            actions: [
+              IconButton(onPressed: () {}, icon: const Icon(Icons.exit_to_app)),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.list)),
+            ],
+            flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [Color(0xff0096ff), Color(0xff6610f2)],
+                    begin: FractionalOffset.topLeft,
+                    end: FractionalOffset.bottomRight),
+                image: DecorationImage(
+                    image: AssetImage('assets/background-white-sand.jpg'),
+                    fit: BoxFit.none,
+                    repeat: ImageRepeat.repeat,
+                    opacity: 120),
+              ),
             ),
           ),
         ),
@@ -50,17 +53,24 @@ class BelajarDesignAppBar extends StatelessWidget {
                     letterSpacing: 2),
               ),
             ),
-            const Text(
-              'leading,title,actions,flexiblespace',
-              style: TextStyle(
-                color: Colors.brown,
-                fontFamily: 'pacifio',
-                letterSpacing: 2,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.italic,
+            Container(
+              margin: const EdgeInsets.only(bottom: 2),
+              child: const Text(
+                'leading,title,actions,flexiblespace',
+                style: TextStyle(
+                  color: Colors.brown,
+                  fontFamily: 'pacifio',
+                  letterSpacing: 2,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                ),
               ),
             ),
+            const Text(
+              'preferedSize untk mengatur Ketinggian Appbar ',
+              style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
+            )
           ],
         )),
       ),
