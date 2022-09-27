@@ -155,6 +155,7 @@ class BelajarLoginPage extends StatelessWidget {
                               ),
                             ),
                             FloatingActionButton(
+                              heroTag: 'fb',
                               mini: true,
                               elevation: 0,
                               onPressed: (() {}),
@@ -166,6 +167,7 @@ class BelajarLoginPage extends StatelessWidget {
                               ),
                             ),
                             FloatingActionButton(
+                              heroTag: 'ig',
                               mini: true,
                               elevation: 0,
                               onPressed: (() {}),
@@ -195,6 +197,16 @@ class BelajarLoginPage extends StatelessWidget {
                               fontSize: 11),
                         ),
                       ],
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(top: 30),
+                      child: TextButton(
+                          onPressed: (() => Navigator.pop(context)),
+                          child: const Text(
+                            '<- Back To Menu',
+                            style: TextStyle(
+                                fontSize: 11, fontStyle: FontStyle.italic),
+                          )),
                     )
                   ],
                 ),

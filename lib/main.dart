@@ -6,6 +6,7 @@ import 'package:flutter_application_2/Belajar/belajar_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_container.dart';
 import 'package:flutter_application_2/Belajar/belajar_costum_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_fontstyle.dart';
+import 'package:flutter_application_2/Belajar/belajar_hero_dan_cliprrect.dart';
 import 'package:flutter_application_2/Belajar/belajar_image.dart';
 import 'package:flutter_application_2/Belajar/belajar_media_query.dart';
 import 'package:flutter_application_2/Belajar/belajar_row_dan_column.dart';
@@ -69,6 +70,8 @@ class MyApp extends StatelessWidget {
             context, 'inkWell (buttonSendiri)', const BelajarInkwell()),
         containerList(context, 'CostumCard', const BelajarCostumCard()),
         containerList(context, 'Login Page', const BelajarLoginPage()),
+        containerList(
+            context, 'HeroAndClipRRect', const BelajarHeroAndClipRRect()),
       ]),
     );
   }
