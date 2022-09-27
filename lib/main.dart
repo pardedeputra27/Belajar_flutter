@@ -14,6 +14,7 @@ import 'package:flutter_application_2/Belajar/belajar_statefull.dart';
 import 'package:flutter_application_2/Belajar/belajar_textfield.dart';
 import 'package:flutter_application_2/Belajar/belajarlist_dan_listview.dart';
 import 'package:flutter_application_2/Belajar/draggable.dart';
+import 'package:flutter_application_2/Belajar/login_page.dart';
 import 'package:flutter_application_2/Belajar/membuat_flexible_widget.dart';
 import 'package:flutter_application_2/Belajar/stack_and_align.dart';
 
@@ -37,6 +38,15 @@ class MyApp extends StatelessWidget {
         ),
       ),
       body: ListView(children: [
+        Center(
+            child: Container(
+          margin: const EdgeInsets.only(top: 10, bottom: 10),
+          child: const Text(
+            'Ini adalah hasil pembelajaran saya',
+            style:
+                TextStyle(color: Colors.green, fontSize: 20, letterSpacing: 2),
+          ),
+        )),
         containerList(context, 'Row and Column', const BelajarRowAndColumn()),
         containerList(context, 'Container', const BelajarContainer()),
         containerList(context, 'Statefull', const BelajarStatefull()),
@@ -58,6 +68,7 @@ class MyApp extends StatelessWidget {
         containerList(
             context, 'inkWell (buttonSendiri)', const BelajarInkwell()),
         containerList(context, 'CostumCard', const BelajarCostumCard()),
+        containerList(context, 'Login Page', const BelajarLoginPage()),
       ]),
     );
   }
