@@ -13,6 +13,7 @@ import 'package:flutter_application_2/Belajar/belajar_media_query.dart';
 import 'package:flutter_application_2/Belajar/belajar_row_dan_column.dart';
 import 'package:flutter_application_2/Belajar/belajar_spacer.dart';
 import 'package:flutter_application_2/Belajar/belajar_statefull.dart';
+
 import 'package:flutter_application_2/Belajar/belajar_textfield.dart';
 import 'package:flutter_application_2/Belajar/belajarlist_dan_listview.dart';
 import 'package:flutter_application_2/Belajar/draggable.dart';
@@ -29,50 +30,70 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Flexible(
-            flex: 1,
-            child: Text('Belajar Flutter dari erico dermawan'),
-          ),
-        ),
-        body: ListView(children: [
-          Center(
-              child: Container(
-            margin: const EdgeInsets.only(top: 10, bottom: 10),
-            child: const Text(
-              'Ini adalah hasil pembelajaran saya',
-              style: TextStyle(
-                  color: Colors.green, fontSize: 20, letterSpacing: 2),
+    return DefaultTabController(
+      length: 3,
+      child: MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+              bottom: const TabBar(
+                tabs: [
+                  Tab(icon: Icon(Icons.computer)),
+                  Tab(icon: Icon(Icons.safety_check)),
+                  Tab(icon: Icon(Icons.directions_bike)),
+                ],
+              ),
+              title: const Text('BeLajar dari Erico dermawan'),
             ),
-          )),
-          containerList(context, 'Row and Column', const BelajarRowAndColumn()),
-          containerList(context, 'Container', const BelajarContainer()),
-          containerList(context, 'Statefull', const BelajarStatefull()),
-          containerList(
-              context, 'Anynomous Method', const BelajarAnonymousMethod()),
-          containerList(context, 'Text Style', const BelajarTextStyle()),
-          containerList(
-              context, 'List and ListView', const BelajarListAndListview()),
-          containerList(context, 'Animated and Gesture',
-              const BelajarAnimatedAndGesture()),
-          containerList(context, 'Flexible', const BelajarFlexibleWidget()),
-          containerList(context, 'Stack and Align', const BelajarStack()),
-          containerList(context, 'Image', const BelajarImage()),
-          containerList(context, 'Spacer', const BelajarSpacer()),
-          containerList(context, 'Draggable', const BelajarDraggable()),
-          containerList(context, 'Card', const BelajarCard()),
-          containerList(context, 'Text Field', const BelajarTextField()),
-          containerList(context, 'Media Query', const BelajarMediaQuery()),
-          containerList(
-              context, 'inkWell (buttonSendiri)', const BelajarInkwell()),
-          containerList(context, 'CostumCard', const BelajarCostumCard()),
-          containerList(context, 'Login Page', const BelajarLoginPage()),
-          containerList(
-              context, 'HeroAndClipRRect', const BelajarHeroAndClipRRect()),
-          containerList(context, 'Appbar design', const BelajarDesignAppBar()),
-        ]),
+            body: TabBarView(children: [
+              ListView(children: [
+                Center(
+                    child: Container(
+                  margin: const EdgeInsets.only(top: 10, bottom: 10),
+                  child: const Text(
+                    'Ini adalah hasil pembelajaran saya',
+                    style: TextStyle(
+                        color: Colors.green, fontSize: 20, letterSpacing: 2),
+                  ),
+                )),
+                containerList(
+                    context, 'Row and Column', const BelajarRowAndColumn()),
+                containerList(context, 'Container', const BelajarContainer()),
+                containerList(context, 'Statefull', const BelajarStatefull()),
+                containerList(context, 'Anynomous Method',
+                    const BelajarAnonymousMethod()),
+                containerList(context, 'Text Style', const BelajarTextStyle()),
+                containerList(context, 'List and ListView',
+                    const BelajarListAndListview()),
+                containerList(context, 'Animated and Gesture',
+                    const BelajarAnimatedAndGesture()),
+                containerList(
+                    context, 'Flexible', const BelajarFlexibleWidget()),
+                containerList(context, 'Stack and Align', const BelajarStack()),
+                containerList(context, 'Image', const BelajarImage()),
+                containerList(context, 'Spacer', const BelajarSpacer()),
+                containerList(context, 'Draggable', const BelajarDraggable()),
+                containerList(context, 'Card', const BelajarCard()),
+                containerList(context, 'Text Field', const BelajarTextField()),
+                containerList(
+                    context, 'Media Query', const BelajarMediaQuery()),
+                containerList(
+                    context, 'inkWell (buttonSendiri)', const BelajarInkwell()),
+                containerList(context, 'CostumCard', const BelajarCostumCard()),
+                containerList(context, 'Login Page', const BelajarLoginPage()),
+                containerList(context, 'HeroAndClipRRect',
+                    const BelajarHeroAndClipRRect()),
+                containerList(
+                    context, 'Appbar design', const BelajarDesignAppBar()),
+              ]),
+              const Icon(
+                Icons.safety_check,
+                size: 200,
+              ),
+              const Icon(
+                Icons.directions_bike,
+                size: 200,
+              ),
+            ])),
       ),
     );
   }
