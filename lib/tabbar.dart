@@ -3,17 +3,27 @@ import 'package:flutter/material.dart';
 class FirstRoutes extends StatelessWidget {
   const FirstRoutes({Key? key}) : super(key: key);
 
+  final TabBar myTabBar = const TabBar(
+    indicator: BoxDecoration(
+        color: Colors.red,
+        border: Border(
+            top: BorderSide(
+                color: Color.fromARGB(255, 157, 248, 82), width: 7))),
+    // indicatorColor: Colors.redAccent,
+    tabs: [
+      Tab(icon: Icon(Icons.computer)),
+      Tab(icon: Icon(Icons.safety_check)),
+      Tab(icon: Icon(Icons.directions_bike)),
+    ],
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        bottom: const TabBar(
-          tabs: [
-            Tab(icon: Icon(Icons.computer)),
-            Tab(icon: Icon(Icons.safety_check)),
-            Tab(icon: Icon(Icons.directions_bike)),
-          ],
-        ),
+        bottom: PreferredSize(
+            preferredSize: Size.fromHeight(myTabBar.preferredSize.height),
+            child: Container(color: Colors.green, child: myTabBar)),
         title: const Text('BeLajar dari Erico dermawan'),
       ),
       body: TabBarView(children: [
