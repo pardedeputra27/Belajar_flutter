@@ -63,6 +63,7 @@ class FirstRoutes extends StatelessWidget {
           containerList(context, 'Musik/Sound', '/sound'),
           containerList(context, 'ClipPath', '/clipPath'),
           containerList(context, 'POST', '/post'),
+          containerList(context, 'GET', '/get'),
         ]),
         const Icon(
           Icons.safety_check,

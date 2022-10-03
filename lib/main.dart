@@ -8,6 +8,7 @@ import 'package:flutter_application_2/Belajar/belajar_container.dart';
 import 'package:flutter_application_2/Belajar/belajar_costum_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_design_appbar.dart';
 import 'package:flutter_application_2/Belajar/belajar_fontstyle.dart';
+import 'package:flutter_application_2/Belajar/belajar_get.dart';
 import 'package:flutter_application_2/Belajar/belajar_hero_dan_cliprrect.dart';
 import 'package:flutter_application_2/Belajar/belajar_image.dart';
 import 'package:flutter_application_2/Belajar/belajar_media_query.dart';
@@ -65,6 +66,7 @@ class MyApp extends StatelessWidget {
           '/sound': (context) => const BelajarSound(),
           '/clipPath': (context) => const BelajarClipPath(),
           '/post': (context) => const BelajarPost(),
+          '/get': (context) => const BelajarGet(),
         },
       ),
     );
