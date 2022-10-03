@@ -12,6 +12,7 @@ import 'package:flutter_application_2/Belajar/belajar_image.dart';
 import 'package:flutter_application_2/Belajar/belajar_media_query.dart';
 import 'package:flutter_application_2/Belajar/belajar_qr_code.dart';
 import 'package:flutter_application_2/Belajar/belajar_row_dan_column.dart';
+import 'package:flutter_application_2/Belajar/belajar_sound.dart';
 import 'package:flutter_application_2/Belajar/belajar_spacer.dart';
 import 'package:flutter_application_2/Belajar/belajar_statefull.dart';
 import 'package:flutter_application_2/Belajar/belajar_textfield.dart';
@@ -59,6 +60,7 @@ class MyApp extends StatelessWidget {
           '/hero': (context) => const BelajarHeroAndClipRRect(),
           '/appbar': (context) => const BelajarDesignAppBar(),
           '/qrCode': (context) => const BelajarQrCode(),
+          '/sound': (context) => const BelajarSound(),
         },
       ),
     );
