@@ -30,7 +30,7 @@ class _BelajarGetState extends State<BelajarGet> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Center(child: Text('POST Demo')),
+          title: const Center(child: Text('latihan GET')),
           leading: BackButton(
             color: Colors.black,
             onPressed: () {
