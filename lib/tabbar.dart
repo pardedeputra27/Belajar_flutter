@@ -61,6 +61,7 @@ class FirstRoutes extends StatelessWidget {
           containerList(context, 'Appbar design', '/appbar'),
           containerList(context, 'QR Code', '/qrCode'),
           containerList(context, 'Musik/Sound', '/sound'),
+          containerList(context, 'ClipPath', '/clipPath'),
         ]),
         const Icon(
           Icons.safety_check,

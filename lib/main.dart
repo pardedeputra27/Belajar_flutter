@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Belajar/animated_container_and_gesture_detector.dart';
 import 'package:flutter_application_2/Belajar/anonymous_method.dart';
+import 'package:flutter_application_2/Belajar/balajar_clip_path.dart';
 import 'package:flutter_application_2/Belajar/belajar_button_gradiasi.dart';
 import 'package:flutter_application_2/Belajar/belajar_card.dart';
 import 'package:flutter_application_2/Belajar/belajar_container.dart';
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
           '/appbar': (context) => const BelajarDesignAppBar(),
           '/qrCode': (context) => const BelajarQrCode(),
           '/sound': (context) => const BelajarSound(),
+          '/clipPath': (context) => const BelajarClipPath(),
         },
       ),
     );
