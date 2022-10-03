@@ -12,6 +12,7 @@ import 'package:flutter_application_2/Belajar/belajar_get.dart';
 import 'package:flutter_application_2/Belajar/belajar_hero_dan_cliprrect.dart';
 import 'package:flutter_application_2/Belajar/belajar_image.dart';
 import 'package:flutter_application_2/Belajar/belajar_media_query.dart';
+import 'package:flutter_application_2/Belajar/belajar_page_route_builder.dart';
 import 'package:flutter_application_2/Belajar/belajar_post.dart';
 import 'package:flutter_application_2/Belajar/belajar_qr_code.dart';
 import 'package:flutter_application_2/Belajar/belajar_row_dan_column.dart';
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
           '/clipPath': (context) => const BelajarClipPath(),
           '/post': (context) => const BelajarPost(),
           '/get': (context) => const BelajarGet(),
+          '/route': (context) => const BelajarPageRoute(),
         },
       ),
     );

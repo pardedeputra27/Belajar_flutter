@@ -64,6 +64,7 @@ class FirstRoutes extends StatelessWidget {
           containerList(context, 'ClipPath', '/clipPath'),
           containerList(context, 'POST', '/post'),
           containerList(context, 'GET', '/get'),
+          containerList(context, 'PageRoute Transition', '/route'),
         ]),
         const Icon(
           Icons.safety_check,
