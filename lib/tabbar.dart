@@ -66,6 +66,7 @@ class FirstRoutes extends StatelessWidget {
           containerList(context, 'POST', '/post'),
           containerList(context, 'GET', '/get'),
           containerList(context, 'GET ALL', '/getall'),
+          containerList(context, 'Animated Swicher', '/animatedSwicher'),
         ]),
         const Icon(
           Icons.safety_check,
