@@ -10,7 +10,11 @@ class BelajarAnimatedSwitcher extends StatefulWidget {
 
 class _BelajarAnimatedSwitcherState extends State<BelajarAnimatedSwitcher> {
   bool isOn = false;
-  Widget myWidget = const MyContainer();
+  Widget myWidget = const MyContainer(
+    color: Colors.amber,
+    condition: 'off',
+    keyContainer: 1,
+  );
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +33,7 @@ class _BelajarAnimatedSwitcherState extends State<BelajarAnimatedSwitcher> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               AnimatedSwitcher(
-                duration: const Duration(seconds: 2),
+                duration: const Duration(seconds: 1),
                 child: myWidget,
                 transitionBuilder: (child, animation) {
                   return RotationTransition(turns: animation, child: child);
@@ -47,15 +51,17 @@ class _BelajarAnimatedSwitcherState extends State<BelajarAnimatedSwitcher> {
                     isOn = newValue;
                     setState(() {
                       if (isOn) {
-                        myWidget = const Text(
-                          'Switch: On',
-                          style: TextStyle(
-                              color: Colors.green,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20),
+                        myWidget = const MyContainer(
+                          color: Colors.green,
+                          condition: 'on',
+                          keyContainer: 2,
                         );
                       } else {
-                        myWidget = const MyContainer();
+                        myWidget = const MyContainer(
+                          color: Colors.red,
+                          condition: 'off',
+                          keyContainer: 1,
+                        );
                       }
                     });
                   })
@@ -68,7 +74,15 @@ class _BelajarAnimatedSwitcherState extends State<BelajarAnimatedSwitcher> {
 }
 
 class MyContainer extends StatefulWidget {
-  const MyContainer({Key? key}) : super(key: key);
+  final MaterialColor color;
+  final String condition;
+  final int keyContainer;
+  const MyContainer(
+      {Key? key,
+      required this.color,
+      required this.condition,
+      required this.keyContainer})
+      : super(key: key);
 
   @override
   State<MyContainer> createState() => _MyContainerState();
@@ -78,16 +92,17 @@ class _MyContainerState extends State<MyContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: ValueKey(widget.keyContainer),
       width: 200,
       height: 100,
       decoration: BoxDecoration(
-        color: Colors.red,
+        color: widget.color,
         border: Border.all(color: Colors.black, width: 3),
       ),
-      child: const Center(
+      child: Center(
           child: Text(
-        'Switch: On',
-        style: TextStyle(
+        'Switch:${widget.condition}',
+        style: const TextStyle(
             color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
       )),
     );
